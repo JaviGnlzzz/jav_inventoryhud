@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jav inventario</title>
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/ui.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/inventory.js"></script>
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@18657a9/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script>
+        $(function () {
+            $("#dialog").dialog({
+                autoOpen: false,
+                clickOutside: true
+            });
+        });
+    </script>
+    <div class="ui">
+        <div class="inventory">
+            <div id="playerInventory">
+            </div>
+				<div id="playerInventoryFastItems">
+            </div>
+                
+            <div id="parte-arriba">
+                <div id="controls">
+                    <button class="control" id="use">USAR</button>
+                    <button class="control" id="drop">TIRAR</button>
+                    <button class="control" id="give">DAR</button>
+                    <input type="number" class="control" id="count" value="1">
+                </div>
+            </div>
+
+            <div class="parte-abajo">
+                <div class="info">
+                    <div class="peso" id="contenido-info">
+                        <div class="barra">
+                            <div class="barra-progreso"></div>
+                        </div>
+                        <div class="pesoMax">Espacio actual : <span id="peso-num">99/200</span></div>
+                    </div>
+                </div>
+            </div>
+            
+        <div class="menu-lateral">
+            <div class="boton" action="Hat" event="qb-radialmenu:ToggleProps">
+                <img src="https://i.imgur.com/ZtO53wF.png">
+            </div>
+            <div class="boton" action="Mask" event="qb-radialmenu:ToggleClothing">
+                <img src="https://i.imgur.com/xumzPe1.png">
+            </div>
+           
+            <div class="boton" action="Glasses" event="qb-radialmenu:ToggleProps">
+                <img src="https://i.imgur.com/ZVMaHQV.png" >
+            </div>
+            
+            <div class="boton" action="Neck" event="qb-radialmenu:ToggleClothing">
+                <img src="https://i.imgur.com/GY1MfnR.png" >
+            </div>
+            <div class="boton" action="Shirt" event="qb-radialmenu:ToggleClothing">
+                <img src="https://i.imgur.com/TWnoPuV.png" >
+            </div>
+            <div class="boton" action="Top" event="qb-radialmenu:ToggleClothing">
+                <img src="https://i.imgur.com/YowsimO.png" >
+            </div>
+            <div class="boton" action="Gloves" event="qb-radialmenu:ToggleProps">
+                <img src="https://i.imgur.com/RgcMls6.png" >
+            </div>
+       
+            <div class="boton" action="Bagoff" event="qb-radialmenu:ToggleClothing">
+                <img src="https://i.imgur.com/9AOVvli.png" >
+            </div>
+            <div class="boton" action="Pants" event="qb-radialmenu:ToggleClothing">
+                <img src="https://i.imgur.com/hlloBrG.png" >
+            </div>
+            <div class="boton" action="Shoes" event="qb-radialmenu:ToggleClothing">
+                <img src="https://i.imgur.com/mFfeuT2.png" >
+            </div>
+        </div>   
+        </div>
+            <div id="otherInventory">
+                <div id="noSecondInventoryMessage">
+                </div>
+            </div>
+            <div>
+                <span class="info-div2" style="float: left;"></span>
+                <div class="info-div"></div>
+            </div>
+        </div>        
+    </div>
+
+    <div id="dialog">
+        <div id="nearPlayers">
+        </div>
+    </div>
+
+    <div id="hotbar">
+        <div class="container-hot">
+            <div class="hot-box" id="hotslot-1">
+            </div>
+            <div class="hot-box" id="hotslot-2">
+            </div>
+            <div class="hot-box" id="hotslot-3">
+            </div>
+            <div class="hot-box" id="hotslot-4">
+            </div>
+            <div class="hot-box" id="hotslot-5">
+            </div>
+        </div>
+        <p class="hot-text"></p>
+    </div>
+
+    <div class="caca"></div>
+</body>
+</html>
